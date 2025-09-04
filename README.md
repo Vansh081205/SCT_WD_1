@@ -49,9 +49,11 @@ cd skillcraft-pro
 
 📸 Screenshots
 
-<img width="1893" height="914" alt="image" src="https://github.com/user-attachments/assets/e6008ff0-898b-401a-aa6d-ddd3f532e2be" />
+
 <img width="1893" height="911" alt="image" src="https://github.com/user-attachments/assets/0223ee73-fb18-4540-bdfd-15c4946bea53" />
 <img width="1884" height="915" alt="image" src="https://github.com/user-attachments/assets/5fc93150-8577-4e35-b1da-65538ea6048e" />
+<img width="1879" height="921" alt="image" src="https://github.com/user-attachments/assets/4259d9f3-14c5-47e6-b6ad-82f731ad1fb2" />
+<img width="1885" height="915" alt="image" src="https://github.com/user-attachments/assets/09e66626-1033-4913-9edf-656310b51c34" />
 
 
 
