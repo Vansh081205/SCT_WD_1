@@ -114,42 +114,42 @@ body{
 .about-avatar h3{text-align:center;margin:6px 0}
 .about-avatar p.muted{color:var(--muted);text-align:center}
 
-/* skills */
+
 .skills{margin-top:18px}
 .skill{margin:12px 0}
 .skill-label{font-weight:700;margin-bottom:6px;color:var(--muted)}
 .progress{background:rgba(255,255,255,0.03);height:12px;border-radius:12px;overflow:hidden}
 .progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#ffd28a);width:40%;transition:width .6s}
 
-/* feature grid */
+
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
 .feature{padding:16px;border-radius:12px;text-align:left}
 .feature i{font-size:20px;color:var(--accent);margin-bottom:8px}
 
-/* services */
+
 .section-title{text-align:center;font-size:22px;margin-bottom:6px}
 .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
 .service{padding:22px;border-radius:12px;text-align:center}
 
-/* portfolio controls */
+
 .portfolio-controls{display:flex;gap:10px;justify-content:center;margin:12px 0}
 .filter-btn{padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted);cursor:pointer}
 .filter-btn.active{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:var(--text)}
 
-/* portfolio grid */
+
 .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
 .port-item{overflow:hidden;border-radius:12px;display:block;padding:0;position:relative}
 .thumb{height:200px;background-size:cover;background-position:center}
 .port-meta{padding:12px;background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));color:var(--muted)}
 .port-item:hover .thumb{transform:scale(1.05);transition:transform .5s}
 
-/* testimonials carousel */
+
 .carousel{position:relative;overflow:hidden;padding:10px;border-radius:12px}
 .carousel-track{display:flex;gap:12px;transition:transform .5s ease}
 .testimonial{min-width:320px;padding:22px;border-radius:12px}
 .carousel-controls{position:absolute;right:14px;bottom:14px;display:flex;gap:8px}
 
-/* contact layout */
+
 .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:16px}
 .contact-card label{display:block;margin-bottom:12px}
 .contact-card input,.contact-card textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
@@ -157,12 +157,12 @@ body{
 .form-feedback{margin-top:12px;color:var(--accent)}
 .error{color:#ff7b7b;font-size:12px;display:block;margin-top:6px}
 
-/* contact info/map */
+
 .info-card p{margin:8px 0;color:var(--muted)}
 .info-card .socials{display:flex;gap:8px;margin-top:8px}
 .map-card iframe{width:100%;height:220px;border-radius:10px;border:0}
 
-/* footer */
+
 .site-footer{margin-top:40px;padding:30px 0;color:var(--muted)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .newsletter{max-width:520px;padding:14px}
@@ -170,11 +170,11 @@ body{
 .newsletter-form input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text)}
 .small-socials a{color:var(--muted);margin-left:10px}
 
-/* fade-up animation - initial */
+
 .fade-up{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.2,.9,.2,1)}
 .fade-up.visible{opacity:1;transform:none}
 
-/* responsive */
+
 @media (max-width:1000px){
   .portfolio-grid{grid-template-columns:repeat(2,1fr)}
   .feature-grid{grid-template-columns:repeat(2,1fr)}
@@ -193,7 +193,7 @@ body{
   .footer-inner{flex-direction:column;align-items:flex-start}
 }
 
-/* dark theme (toggle) */
+
 body.dark{
   --bg: #f6f9ff;
   --card: rgba(12,18,22,0.03);
@@ -203,7 +203,6 @@ body.dark{
   --text: #071428;
   background: linear-gradient(180deg,#f7fbff 0%,#eaf6ff 100%);
 }
-/* overlays for background sections */
 .hero-section::before,
 #services::before,
 #portfolio::before,
@@ -220,7 +219,6 @@ body.dark{
   border-radius: inherit;
 }
 
-/* make glass cards more visible */
 .glass {
   background: linear-gradient(
     180deg,
@@ -231,7 +229,6 @@ body.dark{
   color: var(--text);
 }
 
-/* ensure headings + buttons pop */
 h1, h2, h3, .section-title {
   color: var(--text);
   text-shadow: 0 2px 8px rgba(0,0,0,0.35);
@@ -256,9 +253,10 @@ h1, h2, h3, .section-title {
   color: #fff;
 }
 
-/* map styling */
+
 .map-card iframe {
   filter: brightness(0.8) contrast(1.15);
   border-radius: 14px;
 }
+
 
