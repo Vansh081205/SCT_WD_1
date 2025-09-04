@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillCraft Pro — Interactive Portfolio</title>
+
+  <!-- Google Font + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav id="navbar" class="nav glass">
+      <div class="nav-left">
+        <div class="brand" aria-hidden="true">
+          <span class="logo-dot"></span>
+          <span class="brand-text">SkillCraft</span>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button id="hamburger" class="icon-btn hamburger" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero-section" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') center/cover;">
+    <div class="hero-inner">
+      <h1 class="hero-title">
+        I build <span id="typewriter" class="typewriter"></span>
+      </h1>
+      <p class="hero-sub">Creative websites, beautiful UI & seamless UX — crafted for impact.</p>
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn btn-primary glow">View Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+
+      <!-- Extra counters -->
+      <div class="hero-cards">
+        <div class="stat-card">
+          <div class="stat-num" data-target="125">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-target="78">0</div>
+          <div class="stat-label">Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-target="6">0</div>
+          <div class="stat-label">Years</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-target="12">0</div>
+          <div class="stat-label">Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container fade-up" style="background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);">
+    <div class="split">
+      <div class="card glass about-avatar">
+        <div class="avatar"></div>
+        <h3>Hi, I'm Vansh</h3>
+        <p class="muted">Frontend Developer & UI Designer</p>
+        <p>I build fast, accessible, and delightful web experiences. I enjoy turning complex problems into simple, beautiful interfaces.</p>
+        <div class="skills">
+          <div class="skill"><div class="skill-label">HTML</div><div class="progress"><span style="width: 92%"></span></div></div>
+          <div class="skill"><div class="skill-label">CSS</div><div class="progress"><span style="width: 88%"></span></div></div>
+          <div class="skill"><div class="skill-label">JavaScript</div><div class="progress"><span style="width: 82%"></span></div></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>About Me</h2>
+        <p class="lead">I craft responsive websites with a focus on performance, accessibility and aesthetics. I work with clients to turn ideas into polished digital products.</p>
+        <div class="feature-grid">
+          <div class="feature"><i class="fa-solid fa-bolt"></i><h4>Fast Performance</h4><p>Optimized for speed, smallest possible bundle and progressive enhancements.</p></div>
+          <div class="feature"><i class="fa-solid fa-lock"></i><h4>Secure & Accessible</h4><p>Semantic HTML, keyboard navigation, ARIA where needed and stable UX.</p></div>
+          <div class="feature"><i class="fa-solid fa-paintbrush"></i><h4>Pixel Perfect UI</h4><p>Modern visual language with glassmorphism, micro-animations and clean typography.</p></div>
+        </div>
+        <a class="btn glow" href="#contact">Hire Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section container fade-up" style="background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover fixed;">
+    <h2 class="section-title">Services</h2>
+    <p class="muted center">End-to-end digital product services — tailored to your needs.</p>
+    <div class="service-grid">
+      <div class="service glass tilt"><i class="fa-solid fa-code"></i><h3>Custom Development</h3><p>Bespoke front-end & static site development with modern tooling.</p></div>
+      <div class="service glass tilt"><i class="fa-solid fa-display"></i><h3>UI/UX Design</h3><p>Prototypes, design systems and developer-ready UI components.</p></div>
+      <div class="service glass tilt"><i class="fa-solid fa-mobile-screen-button"></i><h3>Responsive Apps</h3><p>Mobile-first web apps with graceful fallbacks.</p></div>
+      <div class="service glass tilt"><i class="fa-solid fa-search"></i><h3>SEO & Analytics</h3><p>Search-friendly pages that get discovered and convert.</p></div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section container fade-up" style="background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="app">App</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+    <div class="portfolio-grid" id="portfolio-grid">
+      <!-- More projects added -->
+      <article class="port-item glass tilt" data-type="web"><div class="thumb" style="background-image:url('https://picsum.photos/600/400?random=21')"></div><div class="port-meta"><h3>Agency Website</h3><p>Corporate branding</p></div></article>
+      <article class="port-item glass tilt" data-type="app"><div class="thumb" style="background-image:url('https://picsum.photos/600/400?random=22')"></div><div class="port-meta"><h3>Fitness Tracker</h3><p>Progressive web app</p></div></article>
+      <article class="port-item glass tilt" data-type="design"><div class="thumb" style="background-image:url('https://picsum.photos/600/400?random=23')"></div><div class="port-meta"><h3>Logo Kit</h3><p>Brand assets</p></div></article>
+      <article class="port-item glass tilt" data-type="web"><div class="thumb" style="background-image:url('https://picsum.photos/600/400?random=24')"></div><div class="port-meta"><h3>eCommerce</h3><p>Shop & cart system</p></div></article>
+    </div>
+  </section>
+
+  <!-- BLOG (NEW) -->
+  <section id="blog" class="section container fade-up" style="background: url('https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1') center/cover fixed;">
+    <h2 class="section-title">Blog</h2>
+    <div class="blog-grid">
+      <article class="blog-card glass">
+        <h3>Why Design Matters</h3>
+        <p>Good design builds trust, drives engagement, and creates delight.</p>
+        <a href="#">Read More</a>
+      </article>
+      <article class="blog-card glass">
+        <h3>Top 5 Web Trends 2025</h3>
+        <p>Discover what’s shaping the future of websites & digital products.</p>
+        <a href="#">Read More</a>
+      </article>
+      <article class="blog-card glass">
+        <h3>Boosting Performance</h3>
+        <p>Tips to make your website blazing fast and SEO friendly.</p>
+        <a href="#">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section container fade-up" style="background: linear-gradient(to right,#ff9966,#ff5e62);">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="carousel" id="testimonials-carousel">
+      <div class="carousel-track">
+        <blockquote class="testimonial glass"><p>“SkillCraft delivered a stunning site — fast and professional.”</p><cite>— Priya R.</cite></blockquote>
+        <blockquote class="testimonial glass"><p>“Great attention to detail. The UI is beautiful and intuitive.”</p><cite>— Rohit K.</cite></blockquote>
+        <blockquote class="testimonial glass"><p>“Superb communication and timely delivery — highly recommend.”</p><cite>— Aisha M.</cite></blockquote>
+      </div>
+      <div class="carousel-controls">
+        <button id="prev" class="icon-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="next" class="icon-btn"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="section container fade-up" style="background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <!-- Form -->
+      <div class="contact-card glass">
+        <form id="contact-form" novalidate>
+          <label>
+            Name
+            <input type="text" id="name" required>
+            <span id="err-name" class="error"></span>
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" required>
+            <span id="err-email" class="error"></span>
+          </label>
+          <label>
+            Message
+            <textarea id="message" rows="4" required></textarea>
+            <span id="err-message" class="error"></span>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+          <div id="form-feedback" class="form-feedback" hidden></div>
+        </form>
+      </div>
+         <!-- Info -->
+      <div class="info-card glass">
+        <h3>Get in Touch</h3>
+        <p>Email: hello@skillcraft.dev</p>
+        <p>Phone: +91 98765 43210</p>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-card glass">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.571293944234!2d76.77941731510741!3d30.73331538163206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0b0e89a7bb%3A0xdda48a4e2a4c2a6c!2sChandigarh!5e0!3m2!1sen!2sin!4v1693926600000!5m2!1sen!2sin" 
+    width="100%" 
+    height="250" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="newsletter glass">
+        <h4>Join the newsletter</h4>
+        <p class="muted">Get weekly design & front-end tips. No spam.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" id="news-email" placeholder="your@email.com" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p id="newsletter-msg" class="muted" hidden>Subscribed (demo).</p>
+      </div>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> SkillCraft — Crafted with care.</p>
+        <div class="small-socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
