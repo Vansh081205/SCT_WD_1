@@ -1,12 +1,8 @@
-/* SkillCraft Pro - script.js
-   Features: typewriter, counters, scroll spy, filters, carousel, dark mode, contact validation
-*/
 
-// ---------- util ----------
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-// ---------- theme toggle ----------
+
 const themeBtn = $('#theme-toggle');
 const body = document.body;
 const savedTheme = localStorage.getItem('theme');
@@ -24,17 +20,15 @@ function updateThemeIcon(){
   icon.className = body.classList.contains('dark') ? 'fa-regular fa-sun' : 'fa-regular fa-moon';
 }
 
-/* hamburger */
+
 const hamburger = $('#hamburger');
 const navLinks = $('#nav-links');
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// close mobile menu on link click
 $$('.nav-link').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-// ---------- typewriter ----------
 const words = ['Developer', 'Designer', 'Creator', 'Problem Solver'];
 const typeEl = $('#typewriter');
 let twIndex = 0, chIndex = 0, forward = true;
@@ -52,7 +46,6 @@ function typeLoop(){
 }
 if (typeEl) typeLoop();
 
-// ---------- counters (animate on view) ----------
 const counters = $$('.stat-num');
 function animateCounters(){
   counters.forEach(el => {
@@ -68,15 +61,12 @@ function animateCounters(){
 }
 let countersDone = false;
 
-// ---------- scroll spy + navbar change ----------
 const nav = $('#navbar');
 const sections = $$('section[id]');
 const navHeight = nav.getBoundingClientRect().height;
 function onScrollSpy(){
-  // navbar glass elevation
   nav.classList.toggle('scrolled', window.scrollY > 20);
 
-  // active link
   const fromTop = window.scrollY + navHeight + 20;
   sections.forEach(section => {
     const id = section.id;
@@ -93,13 +83,11 @@ function onScrollSpy(){
 window.addEventListener('scroll', onScrollSpy);
 onScrollSpy();
 
-// ---------- reveal on scroll (intersection observer) ----------
 const revealEls = $$('.fade-up');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      // animate counters once when hero becomes visible
       if (!countersDone && entry.target.id === 'home') {
         animateCounters();
         countersDone = true;
@@ -109,10 +97,8 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach(el => revealObserver.observe(el));
 
-// also ensure hero stats animate when home in view
 revealObserver.observe($('#home'));
 
-// ---------- portfolio filter ----------
 const filterBtns = $$('.filter-btn');
 const portGrid = $('#portfolio-grid');
 filterBtns.forEach(btn => btn.addEventListener('click', () => {
@@ -131,7 +117,6 @@ filterBtns.forEach(btn => btn.addEventListener('click', () => {
   });
 }));
 
-// ---------- testimonials carousel ----------
 const track = document.querySelector('.carousel-track');
 const slides = $$('.testimonial');
 let currentIndex = 0;
@@ -158,13 +143,10 @@ function resetAuto(){
   autoCarousel = setInterval(nextSlide, 4000);
 }
 
-// show initial
 window.addEventListener('load', ()=> {
-  // ensure slides layout
   showSlide(0);
 });
 
-// ---------- contact form validation (demo) ----------
 const contactForm = $('#contact-form');
 if (contactForm) {
   const errName = $('#err-name'),
@@ -197,7 +179,6 @@ if (contactForm) {
   });
 }
 
-// ---------- newsletter (demo) ----------
 const newsletterForm = $('#newsletter-form');
 if (newsletterForm) {
   const newsMsg = $('#newsletter-msg');
@@ -209,17 +190,14 @@ if (newsletterForm) {
     setTimeout(()=> newsMsg.hidden = true, 3000);
   });}
 
-// ---------- small UI niceties ----------
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ensure progress bars animate into view
 const progSpans = $$('.progress span');
 progSpans.forEach(s => s.style.width = s.style.width || s.getAttribute('style')?.match(/width:\s*(\d+%)/)?.[1] || '40%');
 
-// keyboard accessibility: close mobile nav with Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') navLinks.classList.remove('open');
 });
 
-// very small: adjust carousel on resize
 window.addEventListener('resize', ()=> showSlide(currentIndex));
+
